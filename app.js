@@ -1,17 +1,3 @@
-var winston = require('winston');
-require('winston-papertrail').Papertrail;
-
-var logger = new winston.Logger({
-    transports: [
-        new winston.transports.Papertrail({
-            host: 'logs.papertrailapp.com',
-            port: 12345
-        })
-    ]
-});
-
-logger.info('Starting up.');
-
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -71,6 +57,5 @@ if (app.get('env') === 'development') {
         error: {}
     });
 });*/
-
 
 module.exports = app;
